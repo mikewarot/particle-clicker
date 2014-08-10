@@ -14,23 +14,27 @@ var GameObjects = (function() {
       rate: 1
     },
     factor: {
-      rate: 5
+      rate: 5,
+      all: 1,
+      all_money: 1,
+      all_reputation: 1,
+      all_data: 1
     },
     data: 0,
     reputation: 0,
     money: 0,
     getGrant: function () {
-      var addition = this.reputation * this.factor.rate;
+      var addition = this.reputation * this.factor.rate * this.factor.all * this.factor.all_money;
       this.money += addition;
       return addition;
     },
     acquire: function(amount) {
-      this.data += amount;
+      this.data += amount * this.factor.all * this.factor.all_data;
     },
     research: function(cost, reputation) {
       if (this.data >= cost) {
         this.data -= cost;
-        this.reputation += reputation;
+        this.reputation += reputation * this.factor.all * this.factor.all_reputation;
         return true;
       }
       return false;
@@ -116,6 +120,7 @@ var GameObjects = (function() {
   /** Upgrades
    */
   var upgradesPrototype = {
+    level: 0,
     getReceiver: function() {
       if (this.type === "detector") {
         return lab.detector;
@@ -147,22 +152,27 @@ var GameObjects = (function() {
       return false;
     },
     is_visible: function() {
-      return !this.used && this.hasReceiver() && lab.money >= this.cost * .7;
+      if (this.level > 0 ) {
+         return true;
+      }
+      return this.hasReceiver() && lab.money >= this.cost * .5;
     },
     is_available: function() {
-      return !this.used && this.hasReceiver() && lab.money >= this.cost;
+      return this.hasReceiver() && lab.money >= this.cost;
     },
     buy: function() {
-      if (!this.used && lab.buy(this.cost)) {
-        this.used = true;
+      if (lab.buy(this.cost)) {
         analytics.sendEvent(analytics.events.categoryUpgrades, analytics.events.actionBuy, this.name, 1);
         var rec = this.getReceiver();
         if (rec) {
-          rec[this.property] = rec[this.property] * this.factor + this.constant;
+          this.level++;
+          rec[this.property] = rec[this.property] * this.factor + (this.constant * (Math.pow (this.cost_increase, this.level-1) ) );
         }
-        return true;
+        var cost = this.cost;
+        this.cost = Math.round(this.cost * this.cost_increase);
+        return cost;
       }
-      return false;
+      return -1;
     }
   };
   var upgrades = $.extend([], Helpers.loadFile('json/upgrades.json'),
