@@ -16,25 +16,24 @@ var GameObjects = (function() {
     factor: {
       rate: 5,
       all: 1,
-      all_money: 1,
-      all_reputation: 1,
-      all_data: 1
+      all_hr: 1,
+      all_research: 1,
     },
     data: 0,
     reputation: 0,
     money: 0,
     getGrant: function () {
-      var addition = this.reputation * this.factor.rate * this.factor.all * this.factor.all_money;
+      var addition = this.reputation * this.factor.rate * this.factor.all;
       this.money += addition;
       return addition;
     },
     acquire: function(amount) {
-      this.data += amount * this.factor.all * this.factor.all_data;
+      this.data += amount;
     },
     research: function(cost, reputation) {
       if (this.data >= cost) {
         this.data -= cost;
-        this.reputation += reputation * this.factor.all * this.factor.all_reputation;
+        this.reputation += reputation;
         return true;
       }
       return false;
@@ -124,23 +123,27 @@ var GameObjects = (function() {
     getReceiver: function() {
       if (this.type === "detector") {
         return lab.detector;
-      } else if (this.type === "reputation"){
+      } else if (this.type === "reputation" ){
         return lab.factor;
       } else {
         var context;
         if (this.type === "research") { context = research; }
         else if (this.type === "hr") { context = workers; }
         else { return null; }
-        for (var i = 0; i < context.length; i++) {
-          if (context[i].name === this.receiver) {
-            return context[i];
-          }
+        if ( this.type === "research" || this.type === "hr") {
+           for (var i = 0; i < context.length; i++) {
+              if (context[i].name === this.receiver) {
+                 return context[i];
+              }
+           }
+        } else if ( this.type === "all_research" || this.type === "all_hr" ){
+           return context;
         }
         return null;
       }
     },
     hasReceiver: function() {
-      if (this.type === "detector" || this.type === "reputation") {
+      if (this.type === "detector" || this.type === "reputation" || this.type === "all_research" || this.type === "all_hr" ) {
         return true;
       }
       var rec = this.getReceiver();
@@ -164,7 +167,17 @@ var GameObjects = (function() {
       if (lab.buy(this.cost)) {
         analytics.sendEvent(analytics.events.categoryUpgrades, analytics.events.actionBuy, this.name, 1);
         var rec = this.getReceiver();
-        if (rec) {
+        if (this.type ==="all_hr") {
+          this.level++;
+          for (var i = 0; i < workers.length; i++){
+             workers[i].rate = workers[i].rate * this.factor + (this.constant * (Math.pow (this.cost_increase, this.level-1) ) );
+          }
+        } else if (this.type === "all_research") { 
+          this.level++;
+          for (var i = 0; i < research.length; i++){
+             research[i].reputation = research[i].reputation * this.factor + (this.constant * (Math.pow (this.cost_increase, this.level-1) ) );
+          }
+        } else {
           this.level++;
           rec[this.property] = rec[this.property] * this.factor + (this.constant * (Math.pow (this.cost_increase, this.level-1) ) );
         }

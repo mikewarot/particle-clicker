@@ -53,7 +53,7 @@
       UI.showUpdateValue("#update-funding", grant);
       var sum = 0;
       for (var i = 0; i < workers.length; i++) {
-        sum += workers[i].hired * workers[i].rate;
+        sum += workers[i].hired * workers[i].rate * lab.factor.all_hr;
       }
       lab.acquire(sum);
       achievements.update('count', 'data', sum);
