@@ -14,8 +14,7 @@ var GameObjects = (function() {
       rate: 1
     },
     factor: {
-      rate: 5,
-      all: 1,
+      rate: 2,
       all_hr: 1,
       all_research: 1,
     },
@@ -23,7 +22,7 @@ var GameObjects = (function() {
     reputation: 0,
     money: 0,
     getGrant: function () {
-      var addition = this.reputation * this.factor.rate * this.factor.all;
+      var addition = this.reputation * this.factor.rate;
       this.money += addition;
       return addition;
     },
@@ -56,7 +55,7 @@ var GameObjects = (function() {
   var researchPrototype = {
     level: 0,
     is_visible: function() {
-      return this.level > 0 || lab.data >= this.cost * .7;
+      return this.level > 0 || lab.data >= this.cost * .5;
     },
     is_available: function() {
       return lab.data >= this.cost;
@@ -170,16 +169,16 @@ var GameObjects = (function() {
         if (this.type ==="all_hr") {
           this.level++;
           for (var i = 0; i < workers.length; i++){
-             workers[i].rate = workers[i].rate * this.factor + (this.constant * (Math.pow (this.cost_increase, this.level-1) ) );
+             workers[i].rate = Math.floor( workers[i].rate * this.factor ) + 1 + (this.constant * (Math.pow (this.cost_increase, this.level-1) ) );
           }
         } else if (this.type === "all_research") { 
           this.level++;
           for (var i = 0; i < research.length; i++){
-             research[i].reputation = research[i].reputation * this.factor + (this.constant * (Math.pow (this.cost_increase, this.level-1) ) );
+             research[i].reputation = Math.floor( research[i].reputation * this.factor ) + 1 + (this.constant * (Math.pow (this.cost_increase, this.level-1) ) );
           }
         } else {
           this.level++;
-          rec[this.property] = rec[this.property] * this.factor + (this.constant * (Math.pow (this.cost_increase, this.level-1) ) );
+          rec[this.property] = Math.floor( rec[this.property] * this.factor ) + 1 + (this.constant * (Math.pow (this.cost_increase, this.level-1) ) );
         }
         var cost = this.cost;
         this.cost = Math.round(this.cost * this.cost_increase);

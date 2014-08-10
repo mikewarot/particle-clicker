@@ -1,31 +1,64 @@
 [
   {
-    "name": "New ROOT version",
-    "description": "Hurray. All of you workers will produce (1.1*level) times more data.",
-    "cost": 1000,
+    "name": "2. Nobel Prize",
+    "description": "So your Brightest Minds are now demigods... They will produce (1.7*level) times more data.",
+    "cost": 100000000,
     "cost_increase": 1.8,
-    "type": "all_hr",
-    "receiver": "",
-    "property": "all_hr",
-    "factor": 1.1,
+    "type": "hr",
+    "receiver": "Nobel Prize Winners",
+    "property": "rate",
+    "factor": 1.7,
     "constant": 0
   },
   {
-    "name": "Mass Research",
-    "description": "Wow. All of your future researches yields (1.1*level) times more reputation.",
-    "cost": 1000,
-    "cost_increase": 1.8,
-    "type": "all_research",
-    "receiver": "",
-    "property": "all_research",
+    "name": "Accelerator upgrade",
+    "description": "Increases the luminosity (you get (1.2*level) times more data with clicks).",
+    "cost": 5000,
+    "cost_increase": 5,
+    "type": "detector",
+    "receiver": "Detector",
+    "property": "rate",
+    "factor": 1.2,
+    "constant": 0
+  },
+  {
+    "name": "Detector upgrade",
+    "description": "Your amazing detector works with better efficiency (you get +(3*level) data with clicks).",
+    "cost": 800,
+    "cost_increase": 4,
+    "type": "detector",
+    "receiver": "Detector",
+    "property": "rate",
     "factor": 1,
-    "constant": 2
+    "constant": 3
+  },
+  {
+    "name": "Division of labor",
+    "description": "Teamwork between Postdocs is a great invention. Your Postdocs will produce much more data.",
+    "cost": 2000000,
+    "cost_increase": 2.4,
+    "type": "hr",
+    "receiver": "Postdocs",
+    "property": "rate",
+    "factor": 1.5,
+    "constant": 18
+  },
+  {
+    "name": "Extra coffee",
+    "description": "Sleeping is the coffee of the weak. Your Postdocs will produce (1.5*level) times more data.",
+    "cost": 20000,
+    "cost_increase": 2,
+    "type": "hr",
+    "receiver": "Postdocs",
+    "property": "rate",
+    "factor": 1.5,
+    "constant": 0
   },
   {
     "name": "Free beer",
     "description": "The work is easier when the worker is happy. Your PhD Students will produce +(2*level) data.",
-    "cost": 1000,
-    "cost_increase": 1.8,
+    "cost": 2000,
+    "cost_increase": 2.5,
     "type": "hr",
     "receiver": "PhD Students",
     "property": "rate",
@@ -33,14 +66,25 @@
     "constant": 2
   },
   {
-    "name": "Extra coffee",
-    "description": "Sleeping is the coffee of the weak. Your PhD Students will produce (1.5*level) times more data.",
-    "cost": 3000,
-    "cost_increase": 2,
+    "name": "Increased budget",
+    "description": "Your Research Fellows get a little more money. They will produce +(25*level) more data.",
+    "cost": 200000,
+    "cost_increase": 1.8,
     "type": "hr",
-    "receiver": "PhD Students",
+    "receiver": "Research Fellows",
     "property": "rate",
-    "factor": 1.5,
+    "factor": 1,
+    "constant": 25
+  },
+  {
+    "name": "Mass Research",
+    "description": "Wow. All of your future researches yields (1.1*level) times more reputation.",
+    "cost": 10000,
+    "cost_increase": 1.8,
+    "type": "all_research",
+    "receiver": "All research",
+    "property": "all_research",
+    "factor": 1.1,
     "constant": 0
   },
   {
@@ -55,77 +99,6 @@
     "constant": 0
   },
   {
-    "name": "Division of labor",
-    "description": "Teamwork between PhD Students is a great invention. Your PhD Students will produce much more data.",
-    "cost": 175000,
-    "cost_increase": 2.4,
-    "type": "hr",
-    "receiver": "PhD Students",
-    "property": "rate",
-    "factor": 3,
-    "constant": 3
-  },
-
-  {
-    "name": "Free beer",
-    "description": "The work is easier when the worker is happy. Your Postdocs will produce +(4*level) data.",
-    "cost": 5000,
-    "cost_increase": 1.8,
-    "type": "hr",
-    "receiver": "Postdocs",
-    "property": "rate",
-    "factor": 1,
-    "constant": 4
-  },
-  {
-    "name": "Extra coffee",
-    "description": "Sleeping is the coffee of the weak. Your Postdocs will produce (1.5*level) times more data.",
-    "cost": 20000,
-    "cost_increase": 2,
-    "type": "hr",
-    "receiver": "Postdocs",
-    "property": "rate",
-    "factor": 1.5,
-    "constant": 0
-  },
-
-  {
-    "name": "Motivation",
-    "description": "There are other, you know... more diligent Postdocs... Your Postdocs will produce (2*level) times more data.",
-    "cost": 500000,
-    "cost_increase": 2.2,
-    "type": "hr",
-    "receiver": "Postdocs",
-    "property": "rate",
-    "factor": 2,
-    "constant": 0
-  },
-
-  {
-    "name": "Division of labor",
-    "description": "Teamwork between Postdocs is a great invention. Your Postdocs will produce much more data.",
-    "cost": 2000000,
-    "cost_increase": 2.4,
-    "type": "hr",
-    "receiver": "Postdocs",
-    "property": "rate",
-    "factor": 1.5,
-    "constant": 18
-  },
-
-  {
-    "name": "Increased budget",
-    "description": "Your Research Fellows get a little more money. They will produce +(25*level) more data.",
-    "cost": 200000,
-    "cost_increase": 1.8,
-    "type": "hr",
-    "receiver": "Research Fellows",
-    "property": "rate",
-    "factor": 1,
-    "constant": 25
-  },
-
-  {
     "name": "New gadgets",
     "description": "Your Research Fellows receive new techs. They will produce (1.3*level) times more data.",
     "cost": 800000,
@@ -136,7 +109,17 @@
     "factor": 1.3,
     "constant": 0
   },
-
+  {
+    "name": "New ROOT version",
+    "description": "Hurray. All of you workers will produce (1.1*level) times more data.",
+    "cost": 10000,
+    "cost_increase": 1.8,
+    "type": "all_hr",
+    "receiver": "All worker",
+    "property": "all_hr",
+    "factor": 1.1,
+    "constant": 0
+  },
   {
     "name": "More PhD Students",
     "description": "Your Mighty Professors get some Students to work. They will produce +(75*level) more data.",
@@ -148,70 +131,22 @@
     "factor": 1,
     "constant": 75
   },
-
-  {
-    "name": "2. Nobel Prize",
-    "description": "So your Brightest Minds are now demigods... They will produce (1.7*level) times more data.",
-    "cost": 100000000,
-    "cost_increase": 1.8,
-    "type": "hr",
-    "receiver": "Nobel Prize Winners",
-    "property": "rate",
-    "factor": 1.7,
-    "constant": 0
-  },
-
-  {
-    "name": "Accelerator upgrade",
-    "description": "Increases the luminosity (you get (3*level) times more data with clicks).",
-    "cost": 1000,
-    "cost_increase": 5,
-    "type": "detector",
-    "receiver": "",
-    "property": "rate",
-    "factor": 3,
-    "constant": 0
-  },
-  {
-    "name": "Detector upgrade",
-    "description": "Your amazing detector works with better efficiency (you get +(4*level) data with clicks).",
-    "cost": 800,
-    "cost_increase": 4,
-    "type": "detector",
-    "receiver": "detector",
-    "property": "rate",
-    "factor": 1,
-    "constant": 4
-  },
-  {
-    "name": "Science is cool!!",
-    "description": "Because your science is so popular, you get (1.1*level) times more money for your reputation.",
-    "cost": 900,
-    "cost_increase": 3,
-    "type": "reputation",
-    "receiver": "",
-    "property": "rate",
-    "factor": 1.1,
-    "constant": 0
-  },
-
   {
     "name": "Public Relations",
     "description": "Mainstream press writes about your research of the CP violation. Future research yields (1.2*level) times more reputation.",
-    "cost": 5000,
-    "cost_increase": 2.5,
+    "cost": 1500,
+    "cost_increase": 3,
     "type": "research",
     "receiver": "CP violation",
     "property": "reputation",
     "factor": 1.2,
     "constant": 1
   },
-
   {
     "name": "Public Relations",
     "description": "Your research on J/ψ is featured on national television. Future research yields (1.2*level) times more reputation.",
-    "cost": 40000,
-    "cost_increase": 2.5,
+    "cost": 12000,
+    "cost_increase": 3,
     "type": "research",
     "receiver": "J/ψ",
     "property": "reputation",
@@ -221,45 +156,41 @@
   {
     "name": "Public Relations",
     "description": "In a scientific documentary you speak about the τ lepton. Future research yields (1.2*level) times more reputation.",
-    "cost": 100000,
-    "cost_increase": 2.5,
+    "cost": 42000,
+    "cost_increase": 3,
     "type": "research",
     "receiver": "τ lepton",
     "property": "reputation",
     "factor": 1.2,
     "constant": 1
   },
-
   {
     "name": "Public Relations",
     "description": "You just discovered the most beautiful quark ever! Future research yields (1.2*level) times more reputation.",
-    "cost": 100000,
-    "cost_increase": 2.5,
+    "cost": 84000,
+    "cost_increase": 3,
     "type": "research",
     "receiver": "Beauty quark",
     "property": "reputation",
     "factor": 1.2,
     "constant": 1
   },
-
-
   {
     "name": "Public Relations",
     "description": "You give lectures about this very important part of the Standard Model! Future research yields (1.2*level) times more reputation.",
-    "cost": 250000,
-    "cost_increase": 2.5,
+    "cost": 130000,
+    "cost_increase": 3,
     "type": "research",
     "receiver": "W and Z boson",
     "property": "reputation",
     "factor": 1.2,
     "constant": 1
   },
-
   {
     "name": "Public Relations",
     "description": "This is the top your career! Future research yields (1.2*level) times more reputation.",
-    "cost": 5000000,
-    "cost_increase": 2.5,
+    "cost": 200000,
+    "cost_increase": 3,
     "type": "research",
     "receiver": "Top quark",
     "property": "reputation",
@@ -269,8 +200,8 @@
   {
     "name": "Public Relations",
     "description": "Hollywood makes a movie about the antihydrogen. Your future research yields (1.2*level) times more reputation.",
-    "cost": 22500000,
-    "cost_increase": 2.5,
+    "cost": 1000000,
+    "cost_increase": 3,
     "type": "research",
     "receiver": "Antihydrogen",
     "property": "reputation",
@@ -280,8 +211,8 @@
   {
     "name": "Public Relations",
     "description": "Your little daughter writes about your research on B oscillations in her homework. Future research yields (1.2*level) times more reputation.",
-    "cost": 75000000,
-    "cost_increase": 2.5,
+    "cost": 5000000,
+    "cost_increase": 3,
     "type": "research",
     "receiver": "B oscillations",
     "property": "reputation",
@@ -291,8 +222,8 @@
   {
     "name": "Public Relations",
     "description": "You know more about Top quark than everybody else. Future research yields (1.2*level) times more reputation.",
-    "cost": 50000000,
-    "cost_increase": 2.5,
+    "cost": 12000000,
+    "cost_increase": 3,
     "type": "research",
     "receiver": "Top quark",
     "property": "reputation",
@@ -302,12 +233,23 @@
   {
     "name": "Public Relations",
     "description": "You've found the last missing element of the Standard Model! Future research yields (1.2*level) times more reputation.",
-    "cost": 90000000,
-    "cost_increase": 2.5,
+    "cost": 42000000,
+    "cost_increase": 3,
     "type": "research",
     "receiver": "Higgs boson",
     "property": "reputation",
     "factor": 1.2,
     "constant": 1
+  },
+  {
+    "name": "Science is cool!!",
+    "description": "Because your science is so popular, you get (1.2*level) times more money for your reputation.",
+    "cost": 500,
+    "cost_increase": 3,
+    "type": "reputation",
+    "receiver": "Funding",
+    "property": "rate",
+    "factor": 1.2,
+    "constant": 0
   }
 ]

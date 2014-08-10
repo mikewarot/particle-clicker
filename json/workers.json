@@ -3,28 +3,28 @@
     "name": "PhD Students",
     "description": "Cheap and enthusiastic manpower, they can save you a lot of work.",
     "cost": 100,
-    "cost_increase": 1.4,
+    "cost_increase": 1.6,
     "rate": 1
   },
   {
     "name": "Postdocs",
     "description": "These brilliant minds are here only to serve your needs.",
     "cost": 2000,
-    "cost_increase": 1.4,
+    "cost_increase": 1.65,
     "rate": 5
   },
   {
     "name": "Research Fellows",
     "description": "You pay them a lot. They work a lot.",
     "cost": 50000,
-    "cost_increase": 1.5,
+    "cost_increase": 1.7,
     "rate": 50
   },
   {
     "name": "Tenured Professors",
     "description": "They bring their own group along and are able to get a lot of work done.",
     "cost": 1000000,
-    "cost_increase": 1.6,
+    "cost_increase": 1.75,
     "rate": 100
   },
   {

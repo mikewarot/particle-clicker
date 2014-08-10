@@ -156,7 +156,7 @@
           <li class="media" ng-repeat="u in uc.upgrades" ng-show="u.is_visible()">
             <div class="media-body">
               <h4 class="media-heading">{{ u.name }} <span ng-show="u.level > 0" class="badge">Level {{ u.level | niceNumber }}</span></h4>
-              <p ng-show="u.level < 1"><small>{{ u.receiver }}</small></p>
+              <p ng-show="u.level < 1"><small>Will be affected: {{ u.receiver }}</small></p>
               <p ng-show="u.level > 0">{{ u.description }}</p>
               <button class="btn btn-primary" ng-disabled="!u.is_available()" ng-click="uc.upgrade(u)">Buy <small>({{ u.cost | currency }})</small></button>
             </div>
