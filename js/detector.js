@@ -292,18 +292,16 @@ var detector =
     {
         detector.events.ctx.clearRect(0, 0, 400, 400);
 
-        var del = -1;
-        for (var e in detector.events.list) {
+        var newList = [];
+        for (var e = 0; e < detector.events.list.length; e++) {
             if (detector.events.list[e].alpha > 0) {
                 detector.events.list[e].draw(duration);
-            } else {
-                del = e;
+                newList.push(detector.events.list[e])
             }
         }
 
-        if (del > 0) {
-            detector.events.list.splice(0, del);
-        }
+        delete detector.events.list;
+        detector.events.list = newList;
     }
 };
 
