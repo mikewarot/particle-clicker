@@ -417,7 +417,7 @@
 
   {
     "name": "Public Relations, lvl 1",
-    "description": "You give lectures about this very important part of the Standard Model! Future research yields 1.2 times more reputation.",
+    "description": "You give lectures about the W/Z part of the Standard Model! Future research yields 1.2 times more reputation.",
     "cost": 250000,
     "used": false,
     "type": "research",
@@ -429,7 +429,7 @@
 
   {
     "name": "Public Relations, lvl 2",
-    "description": "You give lectures about this very important part of the Standard Model! Future research yields 1.2 times more reputation.",
+    "description": "You give lectures about the W/Z part of the Standard Model! Future research yields 1.2 times more reputation.",
     "cost": 1000000,
     "used": false,
     "type": "research",
@@ -441,7 +441,7 @@
 
   {
     "name": "Public Relations, lvl 1",
-    "description": "This is the top of your career! Future research yields 1.2 times more reputation.",
+    "description": "This is the top (quark) of your career! Future research yields 1.2 times more reputation.",
     "cost": 5000000,
     "used": false,
     "type": "research",
@@ -452,7 +452,7 @@
   },
   {
     "name": "Public Relations, lvl 2",
-    "description": "This is the top of your career! Future research yields 1.2 times more reputation.",
+    "description": "This is the top (quark) of your career! Future research yields 1.2 times more reputation.",
     "cost": 7500000,
     "used": false,
     "type": "research",
@@ -464,7 +464,7 @@
 
   {
     "name": "Public Relations, lvl 1",
-    "description": "Hollywood makes a movie about the antihydrogen. Your future research yields 1.2 times more reputation.",
+    "description": "Hollywood makes a movie about antihydrogen. Your future research yields 1.2 times more reputation.",
     "cost": 22500000,
     "used": false,
     "type": "research",
@@ -476,7 +476,7 @@
 
   {
     "name": "Public Relations, lvl 2",
-    "description": "Hollywood makes a movie about the antihydrogen. Your future research yields 1.2 times more reputation.",
+    "description": "Hollywood makes a movie about antihydrogen. Your future research yields 1.2 times more reputation.",
     "cost": 40000000,
     "used": false,
     "type": "research",
