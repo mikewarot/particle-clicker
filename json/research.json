@@ -4,7 +4,7 @@
     "description": "CP symmetry is broken!",
     "reputation": 1,
     "cost": 10,
-    "cost_increase": 1.4,
+    "cost_increase": 1.1,
     "image": "assets/icons/png/CPV.png",
     "info": "html/CPV.html"
   },
@@ -13,7 +13,7 @@
     "description": "The J/ψ meson consists of a c and an anti-c quark.",
     "reputation": 5,
     "cost": 100,
-    "cost_increase": 1.45,
+    "cost_increase": 1.045,
     "image": "assets/icons/png/Jpsi.png",
     "info": "html/Jpsi.html"
   },
@@ -22,7 +22,7 @@
     "description": "The third generation charged lepton.",
     "reputation": 50,
     "cost": 2000,
-    "cost_increase": 1.5,
+    "cost_increase": 1.05,
     "image": "assets/icons/png/tau.png",
     "info": "html/tau.html"
   },
@@ -31,7 +31,7 @@
     "description": "The third generation down-type quark.",
     "reputation": 100,
     "cost": 25000,
-    "cost_increase": 1.55,
+    "cost_increase": 1.055,
     "image": "assets/icons/png/b.png",
     "info": "html/b.html"
   },
@@ -40,7 +40,7 @@
     "description": "The carriers of the weak force.",
     "reputation": 200,
     "cost": 50000,
-    "cost_increase": 1.6,
+    "cost_increase": 1.06,
     "image": "assets/icons/png/weak.png",
     "info": "html/weak.html"
   },
@@ -49,7 +49,7 @@
     "description": "The heaviest of the quarks.",
     "reputation": 1000,
     "cost": 2000000,
-    "cost_increase": 2,
+    "cost_increase": 1.2,
     "image": "assets/icons/png/t.png",
     "info": "html/top.html"
   },
@@ -58,7 +58,7 @@
     "description": "The lightest anti-atom, it consists of an antiproton and a positron.",
     "reputation": 5000,
     "cost": 10000000,
-    "cost_increase": 2.5,
+    "cost_increase": 1.25,
     "image": "assets/icons/png/antihydrogen.png",
     "info": "html/antihydrogen.html"
   },
@@ -67,7 +67,7 @@
     "description": "B mesons turn into their antiparticles and vice versa!",
     "reputation": 5000,
     "cost": 50000000,
-    "cost_increase": 2.5,
+    "cost_increase": 1.5,
     "image": "assets/icons/png/BBbar.png",
     "info": "html/BBbar.html"
   },
@@ -76,7 +76,7 @@
     "description": "Spontaneous symmetry breaking and Goldstone bosons sound familiar to you, right?",
     "reputation": 10000,
     "cost": 72500000,
-    "cost_increase": 3,
+    "cost_increase": 1.03,
     "image": "assets/icons/png/H.png",
     "info": "html/H.html"
   }
