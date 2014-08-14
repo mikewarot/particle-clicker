@@ -40,5 +40,12 @@
     "cost": 99999999,
     "cost_increase": 1.01,
     "rate": 1000
+  },
+  {
+    "name": "Internet Users",
+    "description": "They are at home, with lots of time to donate. Their best ideas come from interesting life stories.",
+    "cost": 1000000,
+    "cost_increase": 0.997,
+    "rate": 100
   }
 ]
