@@ -3,8 +3,8 @@
     "name": "CP violation",
     "description": "CP symmetry is broken!",
     "reputation": 1,
-    "cost": 25,
-    "cost_increase": 1.04,
+    "cost": 10,
+    "cost_increase": 1.1,
     "image": "assets/icons/png/CPV.png",
     "info": "html/CPV.html"
   },
